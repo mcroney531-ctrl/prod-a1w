@@ -102,10 +102,10 @@
   .g-card p{font-size:13px;line-height:1.6;margin-bottom:0;color:#eefcfe;}
   @media(max-width:600px){.guardrails{grid-template-columns:1fr;}}
 
-  /* SUGGESTIONS — numbered pills */
-  .sugg{background:var(--shell-grad);border-left:4px solid var(--accent);border-radius:6px;padding:14px 18px;margin-bottom:10px;}
-  .sugg .s-title{font-family:'Fraunces',serif;font-size:14.5px;font-weight:600;margin-bottom:5px;color:var(--seg-lit);}
-  .sugg p{font-size:13px;line-height:1.6;margin-bottom:0;color:#eefcfe;}
+  /* WISHLIST — bordered white box, gradient frame */
+  .wishlist-frame{background:var(--shell-grad);border-radius:14px;padding:3px;margin-top:16px;}
+  .wishlist-box{background:var(--paper);border-radius:12px;padding:24px 28px;}
+  .wishlist-box ul+ul{margin-top:14px;}
 
   .footer{text-align:center;margin-top:50px;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
 
@@ -215,26 +215,18 @@
   <!-- 03 -->
   <div class="section">
     <div class="section-head"><span class="section-num">03</span><h3>Wishlist</h3></div>
-    <p>A few rough edges surfaced this week. Framed under the core thesis, these read less as broken promises and more as specific spots where the floor is still settling.</p>
-    <ul>
-      <li><b>Memory across sessions</b> — stated preferences don't appear to persist. A current limit on how high the floor sits today, not evidence the ceiling isn't real.</li>
-      <li><b>Daily prompt/tip</b> — assumed a generic course-participant context rather than adjusting to the actual role. A sag in one specific spot, not a signal the whole product is unreliable — and the product team has separately flagged this feature as still in progress.</li>
-    </ul>
-    <div class="sugg" style="margin-top:20px;">
-      <div class="s-title">Let the daily tip ask, not assume</div>
-      <p>Rather than assuming role and context upfront, a light clarifying question on first use could invite the user to self-customize — self-correcting through interaction instead of requiring a manual rebuild later.</p>
-    </div>
-    <div class="sugg">
-      <div class="s-title">Start file upload minimal — plain text first</div>
-      <p>.txt upload alone is low technical and security cost, but covers a large share of real use cases — meeting notes, transcripts, working documents. A direct, low-risk way to raise the personalization floor.</p>
-    </div>
-    <div class="sugg">
-      <div class="s-title">Treat fluency-masking-thinness as a category, not a bug report</div>
-      <p>A fluent-sounding but generic or wrong answer is harder to catch than an obviously generic one, precisely because it sounds confident. Worth the product team tracking this as a general risk pattern across the product, not addressing it one instance at a time.</p>
-    </div>
-    <div class="sugg">
-      <div class="s-title">"Quick actions" — capturing for later, to expand</div>
-      <p>Something like: "I want to say X to this person — help me cater it to Y teammate," or "here's my current draft, adjust it for them." Still working out the right verb — not quite "draft," not quite "rewrite" — but the shape of it is a fast, targeted assist rather than a full compose-from-scratch. More to come here.</p>
+    <div class="wishlist-frame">
+      <div class="wishlist-box">
+        <p>A few rough edges surfaced this week. Framed under the core thesis, these read less as broken promises and more as specific spots where the floor is still settling.</p>
+        <ul>
+          <li><b>Memory across sessions</b> — stated preferences don't appear to persist. A current limit on how high the floor sits today, not evidence the ceiling isn't real.</li>
+          <li><b>Daily prompt/tip</b> — assumed a generic course-participant context rather than adjusting to the actual role. A sag in one specific spot, not a signal the whole product is unreliable — and the product team has separately flagged this feature as still in progress.</li>
+        </ul>
+        <ul>
+          <li><b>Let the daily tip ask, not assume</b> — rather than assuming role and context upfront, a light clarifying question on first use could invite the user to self-customize — self-correcting through interaction instead of requiring a manual rebuild later.</li>
+          <li><b>"Quick actions" — capturing for later, to expand</b> — something like: "I want to say X to this person — help me cater it to Y teammate," or "here's my current draft, adjust it for them." Still working out the right verb — not quite "draft," not quite "rewrite" — but the shape of it is a fast, targeted assist rather than a full compose-from-scratch. More to come here.</li>
+        </ul>
+      </div>
     </div>
   </div>
 
