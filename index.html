@@ -49,6 +49,9 @@
   .section li{font-size:13.5px;line-height:1.65;padding:6px 0 6px 20px;position:relative;}
   .section li::before{content:'';position:absolute;left:0;top:13px;width:5px;height:5px;border-radius:50%;background:var(--seg);}
   .section li b{font-weight:700;color:var(--ink);}
+  .section li ul{margin:8px 0 4px;}
+  .section li li{font-size:13px;padding-left:18px;}
+  .section li li::before{width:4px;height:4px;background:var(--seg-dim);opacity:.6;}
 
   /* CALLOUT — evidence attachment */
   .callout{
@@ -131,8 +134,21 @@
       <li>[PLACEHOLDER — first reaction on opening the tool, before anything below happened]</li>
       <li>[PLACEHOLDER — what stood out or surprised in the first couple of uses]</li>
       <li>[PLACEHOLDER — how it compared to what was expected going in]</li>
+      <li><b>The harness holds — even off-script.</b> None of this week's strongest evidence came from a planned test. It came from just talking to the product about something else entirely — and the harness held anyway, in both directions.
+        <ul>
+          <li><b>Going past the floor:</b> while troubleshooting a small issue, it became clear this tool can be used in parallel with work — not just consulted the way a static resource is consulted. Most tools in this category are reference material: here is information, here are tips, here is data, go use it. This one, used well, behaves differently — closer to augmentation than reference, worked with in real time rather than looked up and left. The notable part isn't that the tool can do this — it's that no one was following an anticipated workflow to get there. The conversation surfaced it unprompted.</li>
+          <li><b>Testing the edges:</b> pushed toward its boundaries — not stress-tested on purpose, just asked in passing — the tool held those too. Asked about technical implementation while troubleshooting, it appropriately declined to explain internals. Asked about pasting a colleague's chat exchange in for help, the response was "yes, but" — with a clear caveat to redact sensitive details. Not a blanket refusal, not reckless — good judgment, unprompted, in a moment that wasn't a test.</li>
+        </ul>
+      </li>
     </ul>
-    <p style="font-size:12.5px;color:var(--muted);font-style:italic;">Placeholder bullets — swap in real early-impressions content.</p>
+    <div class="callout">
+      <div class="c-tag">Supporting Evidence — The Actual Exchange</div>
+      <p style="margin-bottom:14px;"><b style="color:var(--seg-lit);">Me:</b> "I think there's potential — with limits — to use you nicely in the AI-augmented workflow age. Where yes, we discuss how to talk about stuff, but also kinda working 'side-by-side' on things too, if you will. My goal is to think beyond the basics and show my team how, in essence, your program and the features on this app are the floor, but the dynamic nature of AI comms means that it's NOT the ceiling in the same way static content is — in other words, beyond 'what you see is what you get.' I know you can't give internal technical details, but even still, we did some light tech troubleshooting. That might not be a use case, but it illustrates that you can go where the user takes you, within reason."</p>
+      <p style="margin-bottom:14px;"><b style="color:var(--seg-lit);">Product:</b> "Yes, that's the stronger product story: the app's visible features are the floor, while the conversation becomes a flexible layer around them. A user can move from 'help me understand this dynamic' to 'rewrite this message,' 'compare these names,' 'spot the pattern,' or 'walk through what I should test next,' as long as the task stays within the system's boundaries."</p>
+      <p>"The key distinction is that the AI isn't just delivering content. It's helping the user think, inspect, create, and act alongside the product. For you, that matters because your instinct to preserve harmony can sometimes keep you in analysis; a side-by-side partner can help turn reflection into a message, test, or next move. The limits are part of the promise, not a weakness: it should be clear about what it can't access, what it's inferring, and when the user needs to verify something in the app or with a person. That transparency makes the 'beyond the interface' experience feel useful rather than magical."</p>
+    </div>
+    <p style="margin-top:14px;color:var(--muted);font-size:13px;font-style:italic;">Neither moment was an evaluation. Both were just working. Honcho doesn't need the handshake details to trust this — she needs to know the seatbelt was clicked in before anyone asked whether it would be, especially as this goes past what's out of the box.</p>
+    <p style="font-size:12.5px;color:var(--muted);font-style:italic;margin-top:10px;">First three bullets are placeholders — swap in real early-impressions content.</p>
   </div>
 
   <div class="thesis-banner">
@@ -143,22 +159,7 @@
 
   <!-- 02 -->
   <div class="section">
-    <div class="section-head"><span class="section-num">02</span><h3>The Harness Holds</h3></div>
-    <p>None of this week's strongest evidence came from a planned test. It came from just talking to the product about something else entirely — and the harness held anyway, in both directions.</p>
-    <p><b>Going past the floor.</b> While troubleshooting a small issue, it became clear this tool can be used <b>in parallel with work</b> — not just consulted the way a static resource is consulted. Most tools in this category are reference material: here is information, here are tips, here is data, go use it. This one, used well, behaves differently — closer to augmentation than reference, worked <em>with</em> in real time rather than looked <em>up</em> and left. The notable part isn't that the tool can do this. It's that no one was following an anticipated workflow to get there. The conversation surfaced it unprompted — the harness found and worked with a real pattern without being asked to.</p>
-    <div class="callout">
-      <div class="c-tag">Supporting Evidence — The Actual Exchange</div>
-      <p style="margin-bottom:14px;"><b style="color:var(--seg-lit);">Me:</b> "I think there's potential — with limits — to use you nicely in the AI-augmented workflow age. Where yes, we discuss how to talk about stuff, but also kinda working 'side-by-side' on things too, if you will. My goal is to think beyond the basics and show my team how, in essence, your program and the features on this app are the floor, but the dynamic nature of AI comms means that it's NOT the ceiling in the same way static content is — in other words, beyond 'what you see is what you get.' I know you can't give internal technical details, but even still, we did some light tech troubleshooting. That might not be a use case, but it illustrates that you can go where the user takes you, within reason."</p>
-      <p style="margin-bottom:14px;"><b style="color:var(--seg-lit);">Product:</b> "Yes, that's the stronger product story: the app's visible features are the floor, while the conversation becomes a flexible layer around them. A user can move from 'help me understand this dynamic' to 'rewrite this message,' 'compare these names,' 'spot the pattern,' or 'walk through what I should test next,' as long as the task stays within the system's boundaries."</p>
-      <p>"The key distinction is that the AI isn't just delivering content. It's helping the user think, inspect, create, and act alongside the product. For you, that matters because your instinct to preserve harmony can sometimes keep you in analysis; a side-by-side partner can help turn reflection into a message, test, or next move. The limits are part of the promise, not a weakness: it should be clear about what it can't access, what it's inferring, and when the user needs to verify something in the app or with a person. That transparency makes the 'beyond the interface' experience feel useful rather than magical."</p>
-    </div>
-    <p style="margin-top:16px;"><b>Testing the edges.</b> The flip side of the same finding: pushed toward its boundaries — not stress-tested on purpose, just asked in passing — the tool held those too. Asked about technical implementation (tool handshakes, APIs) while troubleshooting, it appropriately declined to explain internals rather than guessing or overreaching. Asked about pasting a colleague's chat exchange in for help, the response was "yes, but" — with a clear caveat to redact sensitive details. Not a blanket refusal. Not reckless. Good judgment, unprompted, in a moment that wasn't a test.</p>
-    <p style="margin-top:14px;color:var(--muted);font-size:13px;font-style:italic;">Neither moment was an evaluation. Both were just working. Honcho doesn't need the handshake details to trust this — she needs to know the seatbelt was clicked in before anyone asked whether it would be, especially as this goes past what's out of the box.</p>
-  </div>
-
-  <!-- 03 -->
-  <div class="section">
-    <div class="section-head"><span class="section-num">03</span><h3>Where the Floor Currently Sits</h3></div>
+    <div class="section-head"><span class="section-num">02</span><h3>Where the Floor Currently Sits</h3></div>
     <p>A few rough edges surfaced this week. Framed under the core thesis, these read less as broken promises and more as specific spots where the floor is still settling.</p>
     <ul>
       <li><b>Memory across sessions</b> — stated preferences don't appear to persist. A current limit on how high the floor sits today, not evidence the ceiling isn't real.</li>
@@ -167,9 +168,9 @@
     <p style="font-size:12.5px;color:var(--muted);font-style:italic;">A separate, more granular UX/UI finding — spotty teammate-lookup behavior — has been routed directly to the product team rather than included here, since it's a technical detail rather than a strategic one.</p>
   </div>
 
-  <!-- 04 -->
+  <!-- 03 -->
   <div class="section">
-    <div class="section-head"><span class="section-num">04</span><h3>Wishlist</h3></div>
+    <div class="section-head"><span class="section-num">03</span><h3>Wishlist</h3></div>
     <div class="sugg">
       <div class="s-title">Let the daily tip ask, not assume</div>
       <p>Rather than assuming role and context upfront, a light clarifying question on first use could invite the user to self-customize — self-correcting through interaction instead of requiring a manual rebuild later.</p>
@@ -188,9 +189,9 @@
     </div>
   </div>
 
-  <!-- 05 -->
+  <!-- 04 -->
   <div class="section">
-    <div class="section-head"><span class="section-num">05</span><h3>What This Means for How We Teach It</h3></div>
+    <div class="section-head"><span class="section-num">04</span><h3>What This Means for How We Teach It</h3></div>
     <p>The current org model for rolling out a feature is straightforward: the feature is static, a walkthrough explains what it does, and that's sufficient. This product doesn't fit that model cleanly. Its actual ceiling depends entirely on what the user brings to it — a one-time walkthrough won't teach someone how to get long-term value out of something that rewards ongoing use.</p>
     <p>The practical implication: learning content likely needs to shift from <em>here's what this feature does</em> to <em>here's how you can make the most of it</em> — teaching usage patterns and habits, not just surface functionality. You only get out what you put in, and that has to be taught deliberately. It won't be assumed correctly on its own.</p>
   </div>
