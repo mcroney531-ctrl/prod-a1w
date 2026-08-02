@@ -12,6 +12,7 @@
     --shell:#190f79; --seg:#00627a; --seg-lit:#59e4f9; --seg-dim:#5f0747;
     --tint-1:rgba(89,228,249,.30); --tint-2:rgba(0,98,122,.14);
     --accent:#a5137c; --accent-soft:#7f1068;
+    --shell-grad:linear-gradient(135deg, #63316e 0%, #453973 55%, #384973 100%);
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   body{
@@ -32,7 +33,7 @@
 
   /* THESIS BANNER */
   .thesis-banner{
-    background:var(--shell);border-radius:10px;
+    background:var(--shell-grad);border-radius:10px;
     padding:28px 32px;margin-bottom:42px;
   }
   .thesis-banner .tb-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--seg-lit);font-weight:700;margin-bottom:10px;}
@@ -50,7 +51,7 @@
   .thesis-banner .evidence-box b{color:var(--shell);}
 
   /* SCENARIO — two-column comparison panel */
-  .scenario{background:var(--shell);border-radius:10px;overflow:hidden;margin:16px 0;}
+  .scenario{background:var(--shell-grad);border-radius:10px;overflow:hidden;margin:16px 0;}
   .scenario-head{display:flex;align-items:stretch;}
   .scenario-head > div{flex:1;display:flex;align-items:center;justify-content:center;padding:22px 12px;min-width:0;}
   .scenario-head .sc-divider{width:1px;background:rgba(255,255,255,.2);flex:none;}
@@ -85,7 +86,7 @@
 
   /* CALLOUT — evidence attachment */
   .callout{
-    background:var(--shell);color:#eefcfe;border-radius:8px;
+    background:var(--shell-grad);color:#eefcfe;border-radius:8px;
     padding:20px 24px;margin:16px 0;
   }
   .callout .c-tag{font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--seg-lit);font-weight:700;margin-bottom:8px;}
@@ -93,13 +94,13 @@
 
   /* GUARDRAIL PAIR */
   .guardrails{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0;}
-  .g-card{background:var(--shell);border-radius:8px;padding:16px 18px;}
+  .g-card{background:var(--shell-grad);border-radius:8px;padding:16px 18px;}
   .g-card .g-tag{font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--seg-lit);font-weight:700;margin-bottom:8px;}
   .g-card p{font-size:13px;line-height:1.6;margin-bottom:0;color:#eefcfe;}
   @media(max-width:600px){.guardrails{grid-template-columns:1fr;}}
 
   /* SUGGESTIONS — numbered pills */
-  .sugg{background:var(--shell);border-left:4px solid var(--accent);border-radius:6px;padding:14px 18px;margin-bottom:10px;}
+  .sugg{background:var(--shell-grad);border-left:4px solid var(--accent);border-radius:6px;padding:14px 18px;margin-bottom:10px;}
   .sugg .s-title{font-family:'Fraunces',serif;font-size:14.5px;font-weight:600;margin-bottom:5px;color:var(--seg-lit);}
   .sugg p{font-size:13px;line-height:1.6;margin-bottom:0;color:#eefcfe;}
 
