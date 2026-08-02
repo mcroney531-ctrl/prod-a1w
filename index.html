@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Docs</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#000000; --muted:#4a4470;
+    --rule:#d1f7fd;
+    --shell:#190f79; --seg:#00627a; --seg-lit:#59e4f9; --seg-dim:#5f0747;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:linear-gradient(160deg, #ffffff 0%, #ffffff 35%, #b9e7e3 145%);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;font-weight:300;
+    min-height:100vh;
+    padding:64px 24px 100px;
+  }
+  .wrap{max-width:640px;margin:0 auto;}
+  .kicker{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--seg-dim);font-weight:700;}
+  h1{font-family:'Fraunces',serif;font-size:34px;font-weight:600;letter-spacing:-.6px;line-height:1.1;margin:10px 0 40px;border-bottom:3px solid var(--shell);padding-bottom:22px;}
+  .list{display:flex;flex-direction:column;gap:14px;}
+  a.card{
+    display:block;text-decoration:none;color:inherit;
+    background:var(--shell);border-radius:10px;
+    padding:20px 24px;transition:transform .15s ease;
+  }
+  a.card:hover{transform:translateY(-2px);}
+  a.card .tag{font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--seg-lit);font-weight:700;margin-bottom:8px;}
+  a.card h2{font-family:'Fraunces',serif;font-size:19px;font-weight:600;color:#fff;margin-bottom:6px;}
+  a.card p{font-size:13px;line-height:1.6;color:#eefcfe;}
+  .footer{text-align:center;margin-top:60px;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="kicker">Working Docs</div>
+    <h1>Field Reports &amp; Build Notes</h1>
+    <div class="list">
+      <a class="card" href="docs/after-one-week.html">
+        <div class="tag">Field Report</div>
+        <h2>[Product]: After One Week</h2>
+        <p>Bounded, one-week field report from live beta use of an internal AI-coach product.</p>
+      </a>
+    </div>
+    <div class="footer">Unlisted · not indexed · updated as we iterate</div>
+  </div>
+</body>
+</html>
