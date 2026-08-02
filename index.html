@@ -39,6 +39,16 @@
   .thesis-banner h2{font-family:'Fraunces',serif;font-size:26px;font-weight:600;color:#fff;line-height:1.25;margin-bottom:12px;}
   .thesis-banner p{font-size:14.5px;line-height:1.7;max-width:620px;color:#eefcfe;}
 
+  /* EVIDENCE — lighter callout nested inside the thesis banner */
+  .thesis-banner .evidence-box{
+    background:#b9e7e3;border-radius:8px;
+    padding:20px 24px;margin-top:22px;
+  }
+  .thesis-banner .evidence-box .c-tag{font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-soft);font-weight:700;margin-bottom:8px;}
+  .thesis-banner .evidence-box p{font-size:13.5px;line-height:1.65;color:#0c0c0c;max-width:none;margin-bottom:0;}
+  .thesis-banner .evidence-box p+p{margin-top:14px;}
+  .thesis-banner .evidence-box b{color:var(--shell);}
+
   /* SECTIONS */
   .section{margin-bottom:38px;}
   .section-head{display:flex;align-items:baseline;gap:12px;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid var(--rule);}
@@ -141,12 +151,6 @@
         </ul>
       </li>
     </ul>
-    <div class="callout">
-      <div class="c-tag">Supporting Evidence — The Actual Exchange</div>
-      <p style="margin-bottom:14px;"><b style="color:var(--seg-lit);">Me:</b> "I think there's potential — with limits — to use you nicely in the AI-augmented workflow age. Where yes, we discuss how to talk about stuff, but also kinda working 'side-by-side' on things too, if you will. My goal is to think beyond the basics and show my team how, in essence, your program and the features on this app are the floor, but the dynamic nature of AI comms means that it's NOT the ceiling in the same way static content is — in other words, beyond 'what you see is what you get.' I know you can't give internal technical details, but even still, we did some light tech troubleshooting. That might not be a use case, but it illustrates that you can go where the user takes you, within reason."</p>
-      <p style="margin-bottom:14px;"><b style="color:var(--seg-lit);">Product:</b> "Yes, that's the stronger product story: the app's visible features are the floor, while the conversation becomes a flexible layer around them. A user can move from 'help me understand this dynamic' to 'rewrite this message,' 'compare these names,' 'spot the pattern,' or 'walk through what I should test next,' as long as the task stays within the system's boundaries."</p>
-      <p>"The key distinction is that the AI isn't just delivering content. It's helping the user think, inspect, create, and act alongside the product. For you, that matters because your instinct to preserve harmony can sometimes keep you in analysis; a side-by-side partner can help turn reflection into a message, test, or next move. The limits are part of the promise, not a weakness: it should be clear about what it can't access, what it's inferring, and when the user needs to verify something in the app or with a person. That transparency makes the 'beyond the interface' experience feel useful rather than magical."</p>
-    </div>
     <p style="margin-top:14px;color:var(--muted);font-size:13px;font-style:italic;">Neither moment was an evaluation. Both were just working. Honcho doesn't need the handshake details to trust this — she needs to know the seatbelt was clicked in before anyone asked whether it would be, especially as this goes past what's out of the box.</p>
     <p style="font-size:12.5px;color:var(--muted);font-style:italic;margin-top:10px;">First three bullets are placeholders — swap in real early-impressions content.</p>
   </div>
@@ -155,6 +159,12 @@
     <div class="tb-label">The Core Finding</div>
     <h2>This is the floor, not the ceiling.</h2>
     <p>Out of the box, every user gets the same baseline: the AI coach, the standard features, a reasonable starting experience. What happens after that point is not fixed — the ceiling is set by what the user brings to it and how far they choose to take it. Nearly everything below is either evidence of that floor, or a response to how high the ceiling could go.</p>
+    <div class="evidence-box">
+      <div class="c-tag">Supporting Evidence — The Actual Exchange</div>
+      <p><b>Me:</b> "I think there's potential — with limits — to use you nicely in the AI-augmented workflow age. Where yes, we discuss how to talk about stuff, but also kinda working 'side-by-side' on things too, if you will. My goal is to think beyond the basics and show my team how, in essence, your program and the features on this app are the floor, but the dynamic nature of AI comms means that it's NOT the ceiling in the same way static content is — in other words, beyond 'what you see is what you get.' I know you can't give internal technical details, but even still, we did some light tech troubleshooting. That might not be a use case, but it illustrates that you can go where the user takes you, within reason."</p>
+      <p><b>Product:</b> "Yes, that's the stronger product story: the app's visible features are the floor, while the conversation becomes a flexible layer around them. A user can move from 'help me understand this dynamic' to 'rewrite this message,' 'compare these names,' 'spot the pattern,' or 'walk through what I should test next,' as long as the task stays within the system's boundaries."</p>
+      <p>"The key distinction is that the AI isn't just delivering content. It's helping the user think, inspect, create, and act alongside the product. For you, that matters because your instinct to preserve harmony can sometimes keep you in analysis; a side-by-side partner can help turn reflection into a message, test, or next move. The limits are part of the promise, not a weakness: it should be clear about what it can't access, what it's inferring, and when the user needs to verify something in the app or with a person. That transparency makes the 'beyond the interface' experience feel useful rather than magical."</p>
+    </div>
   </div>
 
   <!-- 02 -->
