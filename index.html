@@ -3,50 +3,193 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Docs</title>
+<title>[PRODUCT NAME] — After One Week</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#000000; --muted:#4a4470;
-    --rule:#d1f7fd;
+    --ink:#000000; --paper:#ffffff; --muted:#4a4470;
+    --rule:#d1f7fd; --card:#f2fdff;
     --shell:#190f79; --seg:#00627a; --seg-lit:#59e4f9; --seg-dim:#5f0747;
+    --tint-1:rgba(89,228,249,.30); --tint-2:rgba(0,98,122,.14);
+    --accent:#a5137c; --accent-soft:#7f1068;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   body{
     background:linear-gradient(160deg, #ffffff 0%, #ffffff 35%, #b9e7e3 145%);
     color:var(--ink);
     font-family:'Inter',sans-serif;font-weight:300;
-    min-height:100vh;
-    padding:64px 24px 100px;
+    padding:56px 24px 100px;
   }
-  .wrap{max-width:640px;margin:0 auto;}
-  .kicker{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--seg-dim);font-weight:700;}
-  h1{font-family:'Fraunces',serif;font-size:34px;font-weight:600;letter-spacing:-.6px;line-height:1.1;margin:10px 0 40px;border-bottom:3px solid var(--shell);padding-bottom:22px;}
-  .list{display:flex;flex-direction:column;gap:14px;}
-  a.card{
-    display:block;text-decoration:none;color:inherit;
+  .doc{max-width:760px;margin:0 auto;}
+
+  /* HEADER */
+  .doc-header{border-bottom:3px solid var(--shell);padding-bottom:22px;margin-bottom:38px;}
+  .kicker{font-family:'Merriweather',serif;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--seg-dim);font-weight:700;}
+  h1{font-family:'Fraunces',serif;font-size:38px;font-weight:600;letter-spacing:-.7px;line-height:1.08;margin:10px 0 8px;}
+  .meta{font-size:12.5px;color:var(--muted);display:flex;gap:18px;flex-wrap:wrap;margin-top:10px;}
+  .meta span{display:flex;align-items:center;gap:5px;}
+  .meta b{color:var(--ink);font-weight:700;}
+
+  /* THESIS BANNER */
+  .thesis-banner{
     background:var(--shell);border-radius:10px;
-    padding:20px 24px;transition:transform .15s ease;
+    padding:28px 32px;margin-bottom:42px;
   }
-  a.card:hover{transform:translateY(-2px);}
-  a.card .tag{font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--seg-lit);font-weight:700;margin-bottom:8px;}
-  a.card h2{font-family:'Fraunces',serif;font-size:19px;font-weight:600;color:#fff;margin-bottom:6px;}
-  a.card p{font-size:13px;line-height:1.6;color:#eefcfe;}
-  .footer{text-align:center;margin-top:60px;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+  .thesis-banner .tb-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--seg-lit);font-weight:700;margin-bottom:10px;}
+  .thesis-banner h2{font-family:'Fraunces',serif;font-size:26px;font-weight:600;color:#fff;line-height:1.25;margin-bottom:12px;}
+  .thesis-banner p{font-size:14.5px;line-height:1.7;max-width:620px;color:#eefcfe;}
+
+  /* SECTIONS */
+  .section{margin-bottom:38px;}
+  .section-head{display:flex;align-items:baseline;gap:12px;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid var(--rule);}
+  .section-num{font-family:'Fraunces',serif;font-size:13px;font-weight:700;color:var(--seg-dim);}
+  .section h3{font-family:'Fraunces',serif;font-size:19px;font-weight:600;letter-spacing:-.2px;}
+  .section p{font-size:14px;line-height:1.75;margin-bottom:12px;}
+  .section ul{list-style:none;margin-bottom:6px;}
+  .section li{font-size:13.5px;line-height:1.65;padding:6px 0 6px 20px;position:relative;}
+  .section li::before{content:'';position:absolute;left:0;top:13px;width:5px;height:5px;border-radius:50%;background:var(--seg);}
+  .section li b{font-weight:700;color:var(--ink);}
+
+  /* CALLOUT — evidence attachment */
+  .callout{
+    background:var(--shell);color:#eefcfe;border-radius:8px;
+    padding:20px 24px;margin:16px 0;
+  }
+  .callout .c-tag{font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--seg-lit);font-weight:700;margin-bottom:8px;}
+  .callout p{font-size:13.5px;line-height:1.65;color:#eefcfe;margin-bottom:0;}
+
+  /* GUARDRAIL PAIR */
+  .guardrails{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0;}
+  .g-card{background:var(--shell);border-radius:8px;padding:16px 18px;}
+  .g-card .g-tag{font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--seg-lit);font-weight:700;margin-bottom:8px;}
+  .g-card p{font-size:13px;line-height:1.6;margin-bottom:0;color:#eefcfe;}
+  @media(max-width:600px){.guardrails{grid-template-columns:1fr;}}
+
+  /* SUGGESTIONS — numbered pills */
+  .sugg{background:var(--shell);border-left:4px solid var(--accent);border-radius:6px;padding:14px 18px;margin-bottom:10px;}
+  .sugg .s-title{font-family:'Fraunces',serif;font-size:14.5px;font-weight:600;margin-bottom:5px;color:var(--seg-lit);}
+  .sugg p{font-size:13px;line-height:1.6;margin-bottom:0;color:#eefcfe;}
+
+  /* CLOSING */
+  .closing{
+    background:var(--shell);border-radius:10px;
+    padding:24px 28px;margin-top:44px;
+  }
+  .closing h3{font-family:'Fraunces',serif;font-size:16px;font-weight:600;color:var(--seg-lit);margin-bottom:8px;}
+  .closing p{font-size:13.5px;line-height:1.7;color:#eefcfe;}
+
+  .footer{text-align:center;margin-top:50px;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+
+  @media print{
+    body{padding:0;}
+    .thesis-banner,.closing{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .callout{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  }
 </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="kicker">Working Docs</div>
-    <h1>Field Reports &amp; Build Notes</h1>
-    <div class="list">
-      <a class="card" href="docs/after-one-week.html">
-        <div class="tag">Field Report</div>
-        <h2>[Product]: After One Week</h2>
-        <p>Bounded, one-week field report from live beta use of an internal AI-coach product.</p>
-      </a>
+<div class="doc">
+
+  <!-- ================================================================
+       EDIT ONLY BELOW THIS LINE
+       Replace only the [BRACKETED CAPS] placeholder text below.
+       Do not change tags, attributes, classes, or anything outside
+       this fence. Return the complete file.
+       ================================================================ -->
+  <div class="doc-header">
+    <div class="kicker">Field Report — One Week In</div>
+    <h1>[PRODUCT NAME]: After One Week</h1>
+    <div class="meta">
+      <span>Prepared for <b>[RECIPIENT NAME]</b></span>
+      <span>·</span>
+      <span>Beta use period: <b>one week</b></span>
+      <span>·</span>
+      <span><b>[DATE]</b></span>
     </div>
-    <div class="footer">Unlisted · not indexed · updated as we iterate</div>
   </div>
+  <!-- ================================================================
+       EDIT ONLY ABOVE THIS LINE
+       ================================================================ -->
+
+  <div class="callout" style="margin-bottom:34px;margin-top:0;">
+    <div class="c-tag">What I Did</div>
+    <ul style="list-style:none;">
+      <li style="font-size:13.5px;line-height:1.65;padding:6px 0 6px 18px;position:relative;color:#eefcfe;"><span style="position:absolute;left:0;top:13px;width:5px;height:5px;border-radius:50%;background:var(--seg-lit);"></span>Attempted a direct teammate lookup</li>
+      <li style="font-size:13.5px;line-height:1.65;padding:6px 0 6px 18px;position:relative;color:#eefcfe;"><span style="position:absolute;left:0;top:13px;width:5px;height:5px;border-radius:50%;background:var(--seg-lit);"></span>Light tech troubleshooting, done in parallel with actual work</li>
+      <li style="font-size:13.5px;line-height:1.65;padding:6px 0 6px 18px;position:relative;color:#eefcfe;"><span style="position:absolute;left:0;top:13px;width:5px;height:5px;border-radius:50%;background:var(--seg-lit);"></span>Asked it about itself and its own capabilities</li>
+      <li style="font-size:13.5px;line-height:1.65;padding:6px 0 6px 18px;position:relative;color:#eefcfe;"><span style="position:absolute;left:0;top:13px;width:5px;height:5px;border-radius:50%;background:var(--seg-lit);"></span>Attempted to launch a "project"</li>
+      <li style="font-size:13.5px;line-height:1.65;padding:6px 0 6px 18px;position:relative;color:#eefcfe;"><span style="position:absolute;left:0;top:13px;width:5px;height:5px;border-radius:50%;background:var(--seg-lit);"></span>Brainstormed use cases with the tool — as in, discussed them with it directly, not just about it</li>
+      <li style="font-size:13.5px;line-height:1.65;padding:6px 0 6px 18px;position:relative;color:#eefcfe;"><span style="position:absolute;left:0;top:13px;width:5px;height:5px;border-radius:50%;background:var(--seg-lit);"></span>Sought guidance on rewording a (mock) harsh message draft</li>
+    </ul>
+    <p style="font-size:11.5px;color:#b9a8d9;font-style:italic;margin-top:10px;">Light for now — more substance and detail to come. Positioning likely to shift as the doc develops.</p>
+  </div>
+
+  <div class="thesis-banner">
+    <div class="tb-label">The Core Finding</div>
+    <h2>This is the floor, not the ceiling.</h2>
+    <p>Out of the box, every user gets the same baseline: the AI coach, the standard features, a reasonable starting experience. What happens after that point is not fixed — the ceiling is set by what the user brings to it and how far they choose to take it. Nearly everything below is either evidence of that floor, or a response to how high the ceiling could go.</p>
+  </div>
+
+  <!-- 01 -->
+  <div class="section">
+    <div class="section-head"><span class="section-num">01</span><h3>The Harness Holds</h3></div>
+    <p>None of this week's strongest evidence came from a planned test. It came from just talking to the product about something else entirely — and the harness held anyway, in both directions.</p>
+    <p><b>Going past the floor.</b> While troubleshooting a small issue, it became clear this tool can be used <b>in parallel with work</b> — not just consulted the way a static resource is consulted. Most tools in this category are reference material: here is information, here are tips, here is data, go use it. This one, used well, behaves differently — closer to augmentation than reference, worked <em>with</em> in real time rather than looked <em>up</em> and left. The notable part isn't that the tool can do this. It's that no one was following an anticipated workflow to get there. The conversation surfaced it unprompted — the harness found and worked with a real pattern without being asked to.</p>
+    <div class="callout">
+      <div class="c-tag">Supporting Evidence — The Actual Exchange</div>
+      <p style="margin-bottom:14px;"><b style="color:var(--seg-lit);">Me:</b> "I think there's potential — with limits — to use you nicely in the AI-augmented workflow age. Where yes, we discuss how to talk about stuff, but also kinda working 'side-by-side' on things too, if you will. My goal is to think beyond the basics and show my team how, in essence, your program and the features on this app are the floor, but the dynamic nature of AI comms means that it's NOT the ceiling in the same way static content is — in other words, beyond 'what you see is what you get.' I know you can't give internal technical details, but even still, we did some light tech troubleshooting. That might not be a use case, but it illustrates that you can go where the user takes you, within reason."</p>
+      <p style="margin-bottom:14px;"><b style="color:var(--seg-lit);">Product:</b> "Yes, that's the stronger product story: the app's visible features are the floor, while the conversation becomes a flexible layer around them. A user can move from 'help me understand this dynamic' to 'rewrite this message,' 'compare these names,' 'spot the pattern,' or 'walk through what I should test next,' as long as the task stays within the system's boundaries."</p>
+      <p>"The key distinction is that the AI isn't just delivering content. It's helping the user think, inspect, create, and act alongside the product. For you, that matters because your instinct to preserve harmony can sometimes keep you in analysis; a side-by-side partner can help turn reflection into a message, test, or next move. The limits are part of the promise, not a weakness: it should be clear about what it can't access, what it's inferring, and when the user needs to verify something in the app or with a person. That transparency makes the 'beyond the interface' experience feel useful rather than magical."</p>
+    </div>
+    <p style="margin-top:16px;"><b>Testing the edges.</b> The flip side of the same finding: pushed toward its boundaries — not stress-tested on purpose, just asked in passing — the tool held those too. Asked about technical implementation (tool handshakes, APIs) while troubleshooting, it appropriately declined to explain internals rather than guessing or overreaching. Asked about pasting a colleague's chat exchange in for help, the response was "yes, but" — with a clear caveat to redact sensitive details. Not a blanket refusal. Not reckless. Good judgment, unprompted, in a moment that wasn't a test.</p>
+    <p style="margin-top:14px;color:var(--muted);font-size:13px;font-style:italic;">Neither moment was an evaluation. Both were just working. Honcho doesn't need the handshake details to trust this — she needs to know the seatbelt was clicked in before anyone asked whether it would be, especially as this goes past what's out of the box.</p>
+  </div>
+
+  <!-- 03 -->
+  <div class="section">
+    <div class="section-head"><span class="section-num">02</span><h3>Where the Floor Currently Sits</h3></div>
+    <p>A few rough edges surfaced this week. Framed under the core thesis, these read less as broken promises and more as specific spots where the floor is still settling.</p>
+    <ul>
+      <li><b>Memory across sessions</b> — stated preferences don't appear to persist. A current limit on how high the floor sits today, not evidence the ceiling isn't real.</li>
+      <li><b>Daily prompt/tip</b> — assumed a generic course-participant context rather than adjusting to the actual role. A sag in one specific spot, not a signal the whole product is unreliable — and the product team has separately flagged this feature as still in progress.</li>
+    </ul>
+    <p style="font-size:12.5px;color:var(--muted);font-style:italic;">A separate, more granular UX/UI finding — spotty teammate-lookup behavior — has been routed directly to the product team rather than included here, since it's a technical detail rather than a strategic one.</p>
+  </div>
+
+  <!-- 04 -->
+  <div class="section">
+    <div class="section-head"><span class="section-num">03</span><h3>Wishlist</h3></div>
+    <div class="sugg">
+      <div class="s-title">Let the daily tip ask, not assume</div>
+      <p>Rather than assuming role and context upfront, a light clarifying question on first use could invite the user to self-customize — self-correcting through interaction instead of requiring a manual rebuild later.</p>
+    </div>
+    <div class="sugg">
+      <div class="s-title">Start file upload minimal — plain text first</div>
+      <p>.txt upload alone is low technical and security cost, but covers a large share of real use cases — meeting notes, transcripts, working documents. A direct, low-risk way to raise the personalization floor.</p>
+    </div>
+    <div class="sugg">
+      <div class="s-title">Treat fluency-masking-thinness as a category, not a bug report</div>
+      <p>A fluent-sounding but generic or wrong answer is harder to catch than an obviously generic one, precisely because it sounds confident. Worth the product team tracking this as a general risk pattern across the product, not addressing it one instance at a time.</p>
+    </div>
+    <div class="sugg">
+      <div class="s-title">"Quick actions" — capturing for later, to expand</div>
+      <p>Something like: "I want to say X to this person — help me cater it to Y teammate," or "here's my current draft, adjust it for them." Still working out the right verb — not quite "draft," not quite "rewrite" — but the shape of it is a fast, targeted assist rather than a full compose-from-scratch. More to come here.</p>
+    </div>
+  </div>
+
+  <!-- 05 -->
+  <div class="section">
+    <div class="section-head"><span class="section-num">04</span><h3>What This Means for How We Teach It</h3></div>
+    <p>The current org model for rolling out a feature is straightforward: the feature is static, a walkthrough explains what it does, and that's sufficient. This product doesn't fit that model cleanly. Its actual ceiling depends entirely on what the user brings to it — a one-time walkthrough won't teach someone how to get long-term value out of something that rewards ongoing use.</p>
+    <p>The practical implication: learning content likely needs to shift from <em>here's what this feature does</em> to <em>here's how you can make the most of it</em> — teaching usage patterns and habits, not just surface functionality. You only get out what you put in, and that has to be taught deliberately. It won't be assumed correctly on its own.</p>
+  </div>
+
+  <div class="closing">
+    <h3>Top-Line, One Week In</h3>
+    <p>Overall impression is genuinely positive. Real potential is already visible, and use cases are surfacing independently rather than needing to be prompted. Worth noting: minimal prior use of the underlying product this extends, and real value still emerged fast with light testing — which is itself a small piece of evidence for how quickly the floor can be found by someone willing to explore it.</p>
+  </div>
+
+  <div class="footer">Prepared as a working field report · Not for wide distribution</div>
+</div>
 </body>
 </html>
