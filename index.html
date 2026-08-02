@@ -83,19 +83,11 @@
   .sugg .s-title{font-family:'Fraunces',serif;font-size:14.5px;font-weight:600;margin-bottom:5px;color:var(--seg-lit);}
   .sugg p{font-size:13px;line-height:1.6;margin-bottom:0;color:#eefcfe;}
 
-  /* CLOSING */
-  .closing{
-    background:var(--shell);border-radius:10px;
-    padding:24px 28px;margin-top:44px;
-  }
-  .closing h3{font-family:'Fraunces',serif;font-size:16px;font-weight:600;color:var(--seg-lit);margin-bottom:8px;}
-  .closing p{font-size:13.5px;line-height:1.7;color:#eefcfe;}
-
   .footer{text-align:center;margin-top:50px;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
 
   @media print{
     body{padding:0;}
-    .thesis-banner,.closing{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .thesis-banner{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
     .callout{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
   }
 </style>
@@ -150,6 +142,7 @@
           <li><b>Testing the edges:</b> pushed toward its boundaries — not stress-tested on purpose, just asked in passing — the tool held those too. Asked about technical implementation while troubleshooting, it appropriately declined to explain internals. Asked about pasting a colleague's chat exchange in for help, the response was "yes, but" — with a clear caveat to redact sensitive details. Not a blanket refusal, not reckless — good judgment, unprompted, in a moment that wasn't a test.</li>
         </ul>
       </li>
+      <li><b>Top-line, one week in:</b> overall impression is genuinely positive. Real potential is already visible, and use cases are surfacing independently rather than needing to be prompted. Worth noting: minimal prior use of the underlying product this extends, and real value still emerged fast with light testing — which is itself a small piece of evidence for how quickly the floor can be found by someone willing to explore it.</li>
     </ul>
     <p style="font-size:12.5px;color:var(--muted);font-style:italic;margin-top:10px;">First three bullets are placeholders — swap in real early-impressions content.</p>
   </div>
@@ -174,8 +167,7 @@
       <li><b>Memory across sessions</b> — stated preferences don't appear to persist. A current limit on how high the floor sits today, not evidence the ceiling isn't real.</li>
       <li><b>Daily prompt/tip</b> — assumed a generic course-participant context rather than adjusting to the actual role. A sag in one specific spot, not a signal the whole product is unreliable — and the product team has separately flagged this feature as still in progress.</li>
     </ul>
-    <p style="font-size:12.5px;color:var(--muted);font-style:italic;margin-bottom:20px;">A separate, more granular UX/UI finding — spotty teammate-lookup behavior — has been routed directly to the product team rather than included here, since it's a technical detail rather than a strategic one.</p>
-    <div class="sugg">
+    <div class="sugg" style="margin-top:20px;">
       <div class="s-title">Let the daily tip ask, not assume</div>
       <p>Rather than assuming role and context upfront, a light clarifying question on first use could invite the user to self-customize — self-correcting through interaction instead of requiring a manual rebuild later.</p>
     </div>
@@ -198,11 +190,6 @@
     <div class="section-head"><span class="section-num">03</span><h3>What This Means for How We Teach It</h3></div>
     <p>The current org model for rolling out a feature is straightforward: the feature is static, a walkthrough explains what it does, and that's sufficient. This product doesn't fit that model cleanly. Its actual ceiling depends entirely on what the user brings to it — a one-time walkthrough won't teach someone how to get long-term value out of something that rewards ongoing use.</p>
     <p>The practical implication: learning content likely needs to shift from <em>here's what this feature does</em> to <em>here's how you can make the most of it</em> — teaching usage patterns and habits, not just surface functionality. You only get out what you put in, and that has to be taught deliberately. It won't be assumed correctly on its own.</p>
-  </div>
-
-  <div class="closing">
-    <h3>Top-Line, One Week In</h3>
-    <p>Overall impression is genuinely positive. Real potential is already visible, and use cases are surfacing independently rather than needing to be prompted. Worth noting: minimal prior use of the underlying product this extends, and real value still emerged fast with light testing — which is itself a small piece of evidence for how quickly the floor can be found by someone willing to explore it.</p>
   </div>
 
   <div class="footer">Prepared as a working field report · Not for wide distribution</div>
