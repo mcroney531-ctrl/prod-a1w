@@ -57,18 +57,27 @@
   .scenario-head > div{flex:1;display:flex;align-items:center;justify-content:center;padding:22px 12px;min-width:0;}
   .scenario-head .sc-divider{width:1px;background:rgba(255,255,255,.2);flex:none;}
   .scenario-name{font-family:'Lexend',sans-serif;font-size:24px;font-weight:600;color:#fff;letter-spacing:-.02em;text-align:center;}
-  .scenario-body{display:grid;grid-template-columns:1fr 1fr;background:linear-gradient(135deg, #ffffff 0%, var(--card) 100%);}
-  .scenario-col{padding:20px 24px;min-width:0;}
-  .scenario-col:first-child{border-right:1px solid var(--rule);}
-  .scenario-item{display:flex;gap:9px;margin-bottom:10px;font-size:13px;color:var(--ink);line-height:1.55;}
-  .si-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:7px;}
-  .scenario-verdict{background:var(--paper);border-top:1px solid var(--rule);padding:16px 24px;font-size:13px;color:var(--muted);line-height:1.6;font-style:italic;}
+  .scenario-body{background:linear-gradient(135deg, #ffffff 0%, var(--card) 100%);padding:22px 24px;}
+  .scenario-label{font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-soft);font-weight:700;margin-bottom:16px;text-align:center;}
+  .t-row{display:grid;grid-template-columns:90px 1fr 1fr;gap:12px;margin-bottom:14px;align-items:stretch;}
+  .t-row:last-child{margin-bottom:0;}
+  .t-trigger{background:var(--shell);color:#fff;font-size:11px;font-weight:600;padding:10px 8px;border-radius:8px;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.3;}
+  .t-card{border-radius:8px;padding:12px 14px;font-size:12.5px;line-height:1.5;color:var(--ink);background:#fff;box-shadow:0 1px 4px rgba(25,15,121,.12);}
+  .t-card.old{border-left:4px solid var(--seg-dim);}
+  .t-card.new{border-left:4px solid var(--accent);}
+  .t-tag{display:inline-block;font-size:9.5px;text-transform:uppercase;letter-spacing:.5px;font-weight:700;padding:2px 8px;border-radius:20px;margin-bottom:6px;}
+  .t-tag.old{background:var(--rule);color:var(--seg-dim);}
+  .t-tag.new{background:var(--shell);color:#fff;}
+  .t-action{font-size:10.5px;color:var(--muted);margin-top:6px;font-style:italic;}
+  .scenario-verdict{background:var(--paper);border-top:1px solid var(--rule);padding:16px 24px;font-size:14px;font-weight:600;color:var(--shell);line-height:1.6;text-align:center;}
   @media(max-width:600px){
     .scenario-name{font-size:16px;}
     .scenario-head > div{padding:14px 6px;}
-    .scenario-col{padding:14px 12px;}
-    .scenario-item{font-size:11.5px;gap:6px;margin-bottom:8px;}
-    .scenario-verdict{padding:14px 16px;font-size:12px;}
+    .scenario-body{padding:16px 14px;}
+    .t-row{grid-template-columns:1fr;gap:6px;margin-bottom:16px;}
+    .t-trigger{padding:6px 8px;}
+    .t-card{font-size:12px;}
+    .scenario-verdict{padding:14px 16px;font-size:13px;}
   }
 
   /* SECTIONS */
@@ -185,18 +194,24 @@
         <div><span class="scenario-name">[NEW-PROD]</span></div>
       </div>
       <div class="scenario-body">
-        <div class="scenario-col">
-          <div class="scenario-item"><div class="si-dot" style="background:var(--seg-dim);"></div>[PLACEHOLDER — old-product characteristic]</div>
-          <div class="scenario-item"><div class="si-dot" style="background:var(--seg-dim);"></div>[PLACEHOLDER — old-product characteristic]</div>
-          <div class="scenario-item"><div class="si-dot" style="background:var(--seg-dim);"></div>[PLACEHOLDER — old-product characteristic]</div>
+        <div class="scenario-label">Same Trigger, Different Kind of Moment</div>
+        <div class="t-row">
+          <div class="t-trigger">Kickoff, deadline set</div>
+          <div class="t-card old"><span class="t-tag old">Look up</span><br>I check their communication style profile in general terms.<div class="t-action">retrieval</div></div>
+          <div class="t-card new"><span class="t-tag new">Craft</span><br>I ask it to help me open the project with a message calibrated to how they actually prefer to work under pressure.<div class="t-action">production</div></div>
         </div>
-        <div class="scenario-col">
-          <div class="scenario-item"><div class="si-dot" style="background:var(--accent);"></div>[PLACEHOLDER — new-product characteristic]</div>
-          <div class="scenario-item"><div class="si-dot" style="background:var(--accent);"></div>[PLACEHOLDER — new-product characteristic]</div>
-          <div class="scenario-item"><div class="si-dot" style="background:var(--accent);"></div>[PLACEHOLDER — new-product characteristic]</div>
+        <div class="t-row">
+          <div class="t-trigger">Mid-week, feeling the crunch</div>
+          <div class="t-card old"><span class="t-tag old">Read</span><br>I re-read the same profile info, still abstract.<div class="t-action">retrieval</div></div>
+          <div class="t-card new"><span class="t-tag new">Act</span><br>I draft an "urgency" message, unsure how direct to be — it helps me push firmly without damaging the relationship.<div class="t-action">production</div></div>
+        </div>
+        <div class="t-row">
+          <div class="t-trigger">Deadline day</div>
+          <div class="t-card old"><span class="t-tag old">— nothing new —</span><br>No further engagement; the information hasn't changed.<div class="t-action">retrieval (idle)</div></div>
+          <div class="t-card new"><span class="t-tag new">Reflect</span><br>After it's done, I ask it to help me think through what worked, so next time is smoother.<div class="t-action">production</div></div>
         </div>
       </div>
-      <div class="scenario-verdict">[PLACEHOLDER — closing verdict line tying the comparison back to the thesis]</div>
+      <div class="scenario-verdict">Same starting point. Very different week.</div>
     </div>
   </div>
 
