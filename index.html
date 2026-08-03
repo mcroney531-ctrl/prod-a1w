@@ -99,10 +99,10 @@
   .g-card p{font-size:13px;line-height:1.6;margin-bottom:0;color:#eefcfe;}
   @media(max-width:600px){.guardrails{grid-template-columns:1fr;}}
 
-  /* WISHLIST — bordered white box, gradient frame */
-  .wishlist-frame{background:var(--shell-grad);border-radius:14px;padding:3px;margin-top:16px;}
-  .wishlist-box{background:var(--paper);border-radius:12px;padding:24px 28px;}
-  .wishlist-box ul+ul{margin-top:14px;}
+  /* GRADIENT FRAME — bordered white box, used by Wishlist & Questions */
+  .gradient-frame{background:var(--shell-grad);border-radius:14px;padding:3px;margin-top:16px;}
+  .gradient-box{background:var(--paper);border-radius:12px;padding:24px 28px;}
+  .gradient-box ul+ul{margin-top:14px;}
 
   .footer{text-align:center;margin-top:50px;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
 
@@ -205,8 +205,8 @@
   <!-- 03 -->
   <div class="section">
     <div class="section-head"><span class="section-num">03</span><h3>Wishlist</h3></div>
-    <div class="wishlist-frame">
-      <div class="wishlist-box">
+    <div class="gradient-frame">
+      <div class="gradient-box">
         <p>A few rough edges surfaced this week. Framed under the core thesis, these read less as broken promises and more as specific spots where the floor is still settling.</p>
         <ul>
           <li><b>Memory across sessions</b> — stated preferences don't appear to persist. A current limit on how high the floor sits today, not evidence the ceiling isn't real.</li>
@@ -232,13 +232,17 @@
   <!-- 05 -->
   <div class="section">
     <div class="section-head"><span class="section-num">05</span><h3>Questions Moving Forward</h3></div>
-    <ul>
-      <li>What are the "early wins" a user can experience that build belief in a product and a desire to return to it for genuine guidance?</li>
-      <li>What research was done during development on how people actually use AI at work, and what did it reveal? That's the kind of insight that could surface clear-cut use cases worth showcasing and advertising.</li>
-      <li>Have we considered role-specific use cases? A project manager constantly checking in with reports on their progress or giving them direction is likely to use this quite differently than an individual contributor. This loops back to the research question above, and connects to the "early wins" a user can build on and want to keep returning to.</li>
-      <li>What cultural and social tone should we actively encourage around this product? [OLD-PROD] took real, deliberate effort to build its own culture and language — the shift from "I've done [OLD-PROD]" to "we use [OLD-PROD]." Something I've been personally wondering about AI more broadly: when does it become normal to talk openly about a genuine revelation from a conversation with an AI, without it feeling stigmatized? Will people share their wins with this product openly, or does it feel more private by nature — and what's our role in shaping that language?</li>
-      <li>Like the useful "here's how you can use this to help yourself advance, improve, and progress" framing from the UMD course — what are the ways we ensure we're presenting this tool in that same light, rather than leaning too heavily on novelty, or a "look what it can do" pitch?</li>
-    </ul>
+    <div class="gradient-frame">
+      <div class="gradient-box">
+        <ul>
+          <li>What are the "early wins" a user can experience that build belief in a product and a desire to return to it for genuine guidance?</li>
+          <li>What research was done during development on how people actually use AI at work, and what did it reveal? That's the kind of insight that could surface clear-cut use cases worth showcasing and advertising.</li>
+          <li>Have we considered role-specific use cases? A project manager constantly checking in with reports on their progress or giving them direction is likely to use this quite differently than an individual contributor. This loops back to the research question above, and connects to the "early wins" a user can build on and want to keep returning to.</li>
+          <li>What cultural and social tone should we actively encourage around this product? [OLD-PROD] took real, deliberate effort to build its own culture and language — the shift from "I've done [OLD-PROD]" to "we use [OLD-PROD]." Something I've been personally wondering about AI more broadly: when does it become normal to talk openly about a genuine revelation from a conversation with an AI, without it feeling stigmatized? Will people share their wins with this product openly, or does it feel more private by nature — and what's our role in shaping that language?</li>
+          <li>Like the useful "here's how you can use this to help yourself advance, improve, and progress" framing from the UMD course — what are the ways we ensure we're presenting this tool in that same light, rather than leaning too heavily on novelty, or a "look what it can do" pitch?</li>
+        </ul>
+      </div>
+    </div>
   </div>
 
   <div class="footer">Prepared as a working field report · Not for wide distribution</div>
